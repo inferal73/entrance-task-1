@@ -6,18 +6,15 @@ const mutation = require('./mutation');
 module.exports = function resolvers () {
   return {
     Query: query,
-
     Mutation: mutation,
-
     Event: {
       users (event) {
-        event.getUsers();
+        return event.getUsers();
       },
       room (event) {
-        event.getRoom();
+        return event.getRoom();
       }
     },
-
     Date: GraphQLDate
   };
 };
